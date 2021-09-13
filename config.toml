@@ -1,0 +1,19 @@
+baseURL = "https://fammatrix.finance"
+googleAnalytics = ""
+languageCode = "en-us"
+title = "FAMMA"
+
+[params]
+    [params.social]
+        facebook = ""
+        twitter = ""
+        reddit = ""
+        telegram = ""
+
+[languages]
+    [languages.en]
+        languageName = "English"
+        title = "FAMMA"
+        description = ""
+        company_name = ""
+        copyright = ""

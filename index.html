@@ -1,0 +1,278 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+	<title>&#128062; Famatrix.finance - A new and quickly thriving DeFi yield aggregator on Binance Smart Chain (BSC).</title>
+
+	<!-- FB Meta Tags-->
+    <meta property="og:url" content="https://Famatrix.finance"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Famatrix.finance"/>
+    <meta property="og:description" content="Yield aggregator, liquidity mining, staking">
+
+    <meta name="theme-color" content="#1FC7D4"/>
+    <meta name="twitter-image" content=""/>
+    <!-- T Meta Tags-->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="&#128062; Famatrix.finance - A new and quickly thriving DeFi yield aggregator on Binance Smart Chain (BSC).">
+    <meta name="twitter:description" content="Yield aggregator, liquidity mining, staking"/>
+	<style>
+		@font-face {
+			font-family: "AvenirNextMedium";
+			src: url("assets/fonts/AvenirNextMedium.ttf");
+		}
+
+		@font-face {
+			font-family: "AvenirNextDemiBold";
+			src: url("assets/fonts/AvenirNextDemiBold.ttf");
+		}
+
+		@font-face {
+			font-family: "AvenirNextBold";
+
+			src: url("assets/fonts/AvenirNextBold.ttf");
+		}
+
+		@font-face {
+			font-family: "LCD";
+			src: url("assets/fonts/lcd.ttf");
+		}
+
+		:root {
+			--bgColor: #111;
+			--logoGradient: linear-gradient(210deg, #00eaff 0%, #0080ff 25%, #8000ff 50%, #e619e6 75%, #f00 100%);
+		}
+
+		body {
+			background-color: var(--bgColor); color: #eee;
+			font-family: "AvenirNextMedium", sans-serif;
+			font-size: 16px; text-align: center; margin: 0;
+
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+		}
+		.selectable {
+			user-select: text; -webkit-user-select: text;
+		}
+
+		a {
+			color: #0080ff;
+			text-decoration: none;
+			transition: all 0.1s;
+		}
+
+		b {
+			color: #fff; font-family: "AvenirNextBold";
+		}
+		.title {
+			font-size: 32px; font-family: "AvenirNextDemiBold"; width: 100%; position: relative; text-align: center; float: left; margin-bottom: 20px;
+		}
+
+		.btn {
+			color: #fff !important; position: relative; float: left; padding: 5px 12px; background-color: #161616; border-radius: 3px; font-family: "AvenirNextDemiBold";
+		}
+		.btn:before {
+			content: '';
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			margin: -2px;
+			z-index: -1;
+			border-radius: 5px;
+			background: var(--logoGradient);
+		}
+
+		.Link {
+			position: relative; display: inline-block; margin: 0 15px; color: #fff7; font-family: "AvenirNextDemiBold";
+		}
+
+		.card {
+			position: relative; display: inline-block; padding: 30px 50px; width: 80%; background-color: #2225; border-radius: 8px; box-shadow: 0 15px 30px #0003; margin-top: 50px; text-align: left; max-width: 500px;
+			user-select: text; -webkit-user-select: text;
+		}
+		.hl {
+			position: relative; display: inline-block; width: 100%;
+		}
+
+		.cmrk:after {
+			background-image: url("assets/cmrk.png"); background-size: contain; background-repeat: no-repeat; display: inline-block; width: 18px; height: 20px; content:""; margin-right: 8px;
+		}
+
+		@media not all and (pointer:coarse) {
+			a:hover {color: #00eaff;}
+
+			.btn:hover {background-color: #1d1d1d;}
+
+			.Link:hover {color: #fffb;}
+
+			.footerLink:hover {color: #fffb !important;}
+		}
+
+		.LinkActive {
+			color: #fff !important; cursor: default;
+		}
+
+
+		#ECGsvgLine {
+			stroke-dasharray: 1850,50;
+			stroke-linecap: round;
+			stroke-dashoffset: -25;
+			animation: pulsate 3s cubic-bezier(0, 0.2, 1, 0.8) infinite;
+			will-change: stroke-dashoffset;
+		}
+
+		@keyframes pulsate {
+			from {
+				stroke-dashoffset: -25;
+			}
+			to {
+				stroke-dashoffset: -1921;
+			}
+		}
+
+
+		@media (max-width: 1000px) {
+			.Link {margin: 0 10px;}
+		}
+
+		@media (max-width: 940px) {
+			.Link {display: flexbox;}
+		}
+
+		@media (max-width: 800px) {
+			.mainTitleBreak {display: none;}
+			.card {width: calc(100% - 100px); max-width: 100%; border-radius: 0; margin-top: 0; box-shadow: none; background-color: #0000;}
+			#bgImg {background-size: 150% auto !important;}
+		}
+	</style>
+</head>
+<body>
+
+	<div style="position: fixed; top: 0; left: 0; width: 100%; height: 80px; background-color: #121212fa; z-index: 1000; box-shadow: 0 12px 25px #0003;">
+		<h3 id="topLogo" style="position: relative; float: left; margin: 30px; margin-right: 0; height: 40px;">&#128062; FaMatrix</h3>
+		<div style="position: relative; display: inline-block; margin-top: 30px;">
+            <a class="Link" href="team">Team</a>
+            <!--<a class="Link" href="">DeFi Intro</a>
+            <a class="Link" href="">Aidrop</a>
+			<a class="Link" href="">Crowdfunding</a>
+            <a class="Link" href="">farms</a>
+            <a class="Link" href="">famatrix Token</a>-->
+        </div>
+	</div>
+
+	<div style="position: absolute; top: 80px; height: 290px; width: 100%; left: 0; opacity: 0.1; z-index: -10;" id="ecgBG">
+		<div style="position: absolute; left: 0; width: 100%; padding-top: 13%; top: 50%; transform: translateY(-50%);">
+			<svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="1500px" height="201px" viewBox="0 0 1500 201" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    		<defs>
+			        <linearGradient x1="61.0522229%" y1="48.0140572%" x2="39.0163373%" y2="52.0335005%" id="linearGradient-1">
+			            <stop stop-color="#00EAFF" offset="0%"></stop>
+			            <stop stop-color="#0080FF" offset="25.2530882%"></stop>
+			            <stop stop-color="#8000FF" offset="49.7394282%"></stop>
+			            <stop stop-color="#E619E6" offset="74.9912298%"></stop>
+			            <stop stop-color="#FF0000" offset="99.9136118%"></stop>
+			        </linearGradient>
+			    </defs>
+			</svg>
+		</div>
+	</div>
+
+	<b class="hl" id="mainTitle" style="font-size: 32px; font-family: 'AvenirNextBold'; margin-top: 130px; max-width: 80%;">Famatrix is a new and quickly thriving<br class="mainTitleBreak"> DeFi yield aggregator platform.</b>
+	<br><br>
+	<span style="position: relative; display: inline-block; font-family: 'AvenirNextDemiBold'; max-width: 80%; id="subTitle>Famma is the native Token of the protocol and is used for network governance, <br class="mainTitleBreak"> 
+	profit distribution for profits generated to liquidity providers and rewarding <br class="mainTitleBreak"> users for staking the token</span>
+	<br><br>
+	<span style="position: relative; display: inline-block; font-family: 'AvenirNextDemiBold'; max-width: 80%;" id="subTitle">Be among the early adopters of Famatrix finance. Be an early bird! <br><br></span>
+    <!-- <button>Buy FMTX Token</button>-->
+	<span class="hl"></span>
+
+	<div class="card" style="margin-top: 30px;">
+		Decentralized Finance (DeFi) has grown tremendously over the past year. There are many parts of DeFi, including lending platforms, liquidity protocols, stock synthetics, automated market makers, and more. Yield aggregators are another option in the Decentralized Finance space.
+		<br><br>
+		Yield Aggregators exist for yield farmers (like you) who want to invest money and maximize profits by leveraging different DeFi protocols and strategies for elevated returns. 
+		<br><br>
+		YieldMatrix makes it easy for you to earn great compounding yields on your deposits, when you don’t have the time to compound it daily or the gas fee is too high for frequent compounding to be done. 
+		In short, YieldMatrix is always on the lookout for opportunities to generate yield on your assets for all risk tolerance levels.
+		<br><br>
+		FaMatrix Token is our native governance token. YieldMatrix holders/investors governs the ecosystem and receive the high percentage of farm performance fee profits when holding/staking YieldMatrix token. This ensures the smooth running of the YieldMatrix Ecosystem.
+		<br><br>
+	</div>
+
+	<span class="hl"></span>
+	<div class="card" style="margin-top: 30px;">
+		Buy FMTX Token
+	</div>
+	<span class="hl"></span>
+	<span class="hl"></span>
+	<div class="card" style="margin-top: 30px;">
+        <b class="title">Join the Famatrix Community</b>
+        <br><br>
+        Want to get involved or learn more? famatrix yield protocol is an open-source ecosystem that provides
+        unique features for yield farming and staking.
+	</div>
+	<span class="hl"></span>
+	<div class="card">
+		<b class="title">Crowdfunding</b>
+		<br><br>
+		FaMatrix Crowdfunding Token Allocated is xxx to be sold.
+        Note that unsold token will be burned once the crowdfunding sales closed. YieldMatrix Liquidity to be added and locked once the Crowdfunding sales closed.
+		<br><br>
+		You will receive (instantly FMTX instantly once your payment confirmed on the blockchain).
+	</div>
+	<span class="hl"></span>
+	<div class="card">
+		<b class="title">Instructions</b>
+		<br><br>        
+        <span class="cmrk"></span><b>Copy the FaMatrix Contract Address ()</b><br>
+        <span class="cmrk"></span><b>Send Minimum of 0.03 BNB(BSC) and Maximum of 50 BNB(BSC)</b><br>
+        <span class="cmrk"></span><b>Set Gas Price (Gwei): 8</b><br>
+        <span class="cmrk"></span><b>Set Gas Limit: 21000</b>       
+		<br><br>
+		Kindly Note: Please send only BNB (BSC) from your personal wallets such as Metamask, WalletConnect, TrustWallet etc. Do not send from an exchange to avoid loss of your token! Thanks.
+		<br><br>
+	</div>
+	<span class="hl"></span>
+	<div class="card">
+		<b class="title">Introducting Famatrix Token</b>
+		<br><br>
+		Famatrix Token has a total supply of 250,000,000 tokens in total. 
+        <br><br>
+		FMTX will be available for purchase on PanCake swap and other ever-growing list of DEXs. YieldMatrixSwap will be available soon where you will be able to swap your YieldMatrix Tokens with ease.
+		<br><br>
+    </div>
+	<span class="hl"></span>
+	<div class="card">
+		<b class="title">Quick Start Quide</b>
+		<br><br>
+		<span class="cmrk"></span><b>Download Metamask
+		<br><br>
+		Create a MetaMask Wallet using either a desktop computer or an iOS/Android mobile device. That will allow you to buy, sell, send, and receive YieldMatrix. You can install the Metamask extension on chrome as well. You can download Metamask from their official website <a href="https://metamask.io/download.html">Metamask Download</a>. Click Install Metamask for Chrome button and follow te steps.</b>
+		<br><br>
+		<span class="cmrk"></span><b>Send BNB to your wallet
+		<br><br>
+		Send BNB to your Metamask wallet
+        You can buy BNB on MetaMask directly or through other platforms like <a href="https://www.binance.com/en">Binance</a> ,<a href="https://www.coinbase.com/">Coinbase</a> etc. Make sure to use the (BEP20 network) when transfering your BNB from an exchange.</b>
+		<br><br>
+		<span class="cmrk"></span><b>Connect your wallet to PanCake Swap:
+		<br><br> 
+		Access your wallet to PanCakeswap by clicking ‘Connect to a wallet’ and selecting MetaMask on <a href="https://exchange.pancakeswap.com/#/swap">PanCake swap.</a></b>
+		<br><br>
+		<span class="cmrk"></span><b>Swap Your Token
+		<br><br>
+		Swap FMTX as soon as you have BNB available! Select a FaMatrix Token by entering its token address on PanCake swap. Happy swapping. &#128540;</b>
+	</div>
+	<br><br>
+
+	<span class="hl" style="margin-bottom: 20px;">
+		<h1 style="color: #fff7; font-size: 12px; font-family: 'AvenirNextDemiBold';" class="footerLink">HODL is the language of winners! - Buy and HODL for higher returns.</h1>
+	</span>
+
+    <span class="hl" style="color: #fff2; font-size: 12px; margin-bottom: 30px;" id="copyright">Copyright &copy;
+	    <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script> All Rights Reserved
+    </span> 
+</script>
+</body>
+</html>
